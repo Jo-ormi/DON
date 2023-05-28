@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do Or Not</title>
+    <link rel="stylesheet" href="../static/styles/tailwind.css"/>
+    <link rel="stylesheet" href="../static/styles/DON.css"/>
+
+</head>
+<body>
+<!-- ====== header Section Start -->
+<header class="absolute left-0 top-0 z-50 w-full">
+    <div class="container mx-auto">
+        <div class="relative -mx-4 flex items-center justify-between">
+            <div class="w-60 max-w-full px-4">
+                <a href="/" class="block w-full py-5">
+                    <img
+                            src="../static/img/logo_img.png"
+                            alt="logo"
+                            class="w-full"
+                    />
+                </a>
+            </div>
+            <div class="flex w-full items-center justify-between px-4">
+
+                <ul class="block lg:flex">
+                    <li>
+                        <a
+                                href="/"
+                                class="flex py-2 text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex"
+                        >
+                            Get Start
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                                href="/intro"
+                                class="flex py-2 text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex"
+                        >
+                            about App
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ====== header Section End -->
+
+<section>
+    <div class="w-full px-4">
+        <div
+                class="relative w-full rounded-lg bg-secondary py-12 px-10 sm:px-12 md:px-[60px]"
+        >
+            <p class="mb-7 text-base text-dark">
+                앞으로의 전망이 궁금한 주식 종목을 입력해보세요
+            </p>
+            <form id="basic-form" action="/result" method="POST">
+                <div class="mb-6">
+
+                    <input
+                            id="stocks"
+                            type="text"
+                            placeholder="종목명을 입력해주세요"
+                            name="Stocks"
+                            class="border-primary w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none focus:border-primary focus-visible:shadow-none"
+                    />
+                </div>
+                <br>
+
+                <p class="mb-7 text-base text-dark">
+                    어떤 관점을 가지고 예측해 볼까요?
+                </p>
+
+                <div class="mb-6">
+
+                    <label class="mb-6 text-base text-body-color">
+                        <input
+                                checked
+                                type="radio"
+                                name="type"
+                                value="외국인 투자자와 기관 투자자 동향을 분석"
+                        /> 외국인 투자자 및 기관 투자자
+                    </label>
+                    <br>
+                    <br>
+                    <label class="mb-6 text-base text-body-color">
+                        <input
+                                type="radio"
+                                name="type"
+                                value="재무 재표와 영업 이익의 동향을 분석""
+                        /> 재무 재표 및 영업 이익
+                    </label>
+                    <br>
+                    <br>
+                    <label class="mb-6 text-base text-body-color">
+                        <input
+                                type="radio"
+                                name="type"
+                                value="재무 재표와 영업 이익의 동향을 분석"
+                        /> 최근 뉴스 및 댓글
+                    </label>
+                </div>
+                <br>
+                <br>
+                <div class="mb-10">
+                    <input
+                            type="submit"
+                            value="확인"
+                            class="border-primary cursor-pointer rounded-md border bg-primary py-3 px-5 text-base text-white transition hover:bg-opacity-90"
+                    />
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<!-- ====== footer Section Start -->
+<footer class="relative z-10 bg-white pt-20 pb-10 lg:pt-[120px] lg:pb-20">
+    <div class="container mx-auto">
+        <div class="mb-10 w-full">
+            <img
+                    src="../static/img/logo_img.png"
+                    alt="logo"
+                    class="max-w-[160px]"
+            />
+
+            <p class="mb-2 ml-3 text-base text-body-color">
+                본 사이트는 구글 Bard에게 질문하여 답을 얻어 제공하고 있습니다.
+            </p>
+            <p class="mb-2 ml-3 text-base text-warning">
+                투자에 대한 의견은 질문을 던질때마다 바뀔 수 있음을 유의하시고, 답변은 참고만 하시어 본인의 판단으로 투자하시길 바랍니다.
+            </p>
+            <p class="mb-3 ml-3 text-base text-warning">
+                본 사이트에서 제공해드린 답변으로 투자를 하여 얻은 그 어떤 불이익도 보상해드릴 수 없습니다.
+            </p>
+            <p class="mb-1 ml-3 text-base text-body-color">
+                Made by HUFS Computer Engineering student YSJ
+            </p>
+
+        </div>
+    </div>
+</footer>
+<!-- ====== footer Section End -->
+</body>
+</html>
+
+<script>
+    let check = document.getElementById("basic-form");
+    check.addEventListener("submit", (e) => {
+        let stock = document.getElementById("stocks");
+        if(stock.value.length === 0){
+            alert("종목을 입력하세요");
+            e.preventDefault();
+        }
+    })
+</script>
