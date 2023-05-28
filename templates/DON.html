@@ -5,7 +5,7 @@
     <title>Do Or Not</title>
     <link rel="stylesheet" href="../static/styles/tailwind.css"/>
     <link rel="stylesheet" href="../static/styles/DON.css"/>
-
+    <script defer src="../static/js/DON.js"></script>
 </head>
 <body>
 <!-- ====== header Section Start -->
@@ -34,7 +34,7 @@
                     </li>
                     <li>
                         <a
-                                href="/intro"
+                                href="https://github.com/Jo-ormi/DON"
                                 class="flex py-2 text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex"
                         >
                             about App
@@ -145,14 +145,3 @@
 <!-- ====== footer Section End -->
 </body>
 </html>
-
-<script>
-    let check = document.getElementById("basic-form");
-    check.addEventListener("submit", (e) => {
-        let stock = document.getElementById("stocks");
-        if(stock.value.length === 0){
-            alert("종목을 입력하세요");
-            e.preventDefault();
-        }
-    })
-</script>
