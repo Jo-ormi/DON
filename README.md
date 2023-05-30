@@ -1,6 +1,6 @@
 # Do Or Not
- ![](static/img/read_me_1.png)
- ![](static/img/read_me_2.png)
+![](static/img/README_IMG.png)
+![](static/img/README_IMG2.png)
 
 <br>
 
